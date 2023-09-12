@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            background: orange; /* 배경색 */
+            color: green; /*  글자색 */
+            font-weight: bold; /* 진하게 설정 */
+            font-family: 'Times New Roman', Times, serif;
+            /* 글꼴 */
+        }
+        h3 {
+            color: blue;
+        }
+        input {
+            background: yellow;
+        }
+    </style>
+
+</head>
+<body>
+    <h3>로그인 화면</h3>
+    <table border="1" align="center">
+        <!-- table align은 테이블을 가운데로 옮겨준다.-->
+        <tr align="center">
+            <td>아이디</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr align="center">
+            <td>패스워드</td>
+            <td><input type="password"></td>
+        </tr>
+        <tr align="center">
+            <td colspan="2" style="background: lime;">
+                <input type="submit" value="로그인처리"
+                        style="background: red;color: white;"
+                >
+                
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
