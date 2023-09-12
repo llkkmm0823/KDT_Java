@@ -5,81 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        input {
-            background: lightgray;
+        td {
+            background: orange; /* 배경색 */
+            color: green; /*  글자색 */
+            font-weight: bold; /* 진하게 설정 */
+            font-family: 'Times New Roman', Times, serif;
+            /* 글꼴 */
         }
-        h2 {
+        h3 {
             color: blue;
         }
-        body{
-            background: #ebe721;
-            color: darkblue;
+        input {
+            background: yellow;
         }
-        .login {
-            background: blue;
-            font-weight: bold;
-            color: white;
-        }
-        .member {
-            background: pink;
-        }
-        #find {
-            background: gold;
-            color: red;
-            font-weight: bold;
-            font-style: italic;
-        }
-        /* 기본 선택자: 태그(태그명), 클래스(.클래스명), 아이디(#아이디명) */
     </style>
+
 </head>
 <body>
-    <h2>검색할 단어를 입력하세요.</h2>
-    <hr color="red">
-    검색할 단어 <input type="text">
-    <input type="submit" value="검색시작" id="find">
-    <hr color="red">
-
-    <h2>로그인 화면</h2>
-    아이디 <input type="text" class = "login"> <br>
-    패스워드 <input type="password"  class = "login"> <br>
-    <!-- 컨트롤 / : 설명쓸 수 있음. 주석,  comment 
-        여러줄 쓸 수 있다.    
-    -->
-    <!-- 여러개쓸 수 있다ㅏ.  -->
-    <!-- input 태그안에 type을 submit으로 버튼이 만들어진다. -->
-    <!-- 컨트롤 +, 컨트롤 -, 글자크기 변경 가능 -->
-    <input type="submit" value="로그인 처리">
-    <!-- hr 는 가로줄 만들어주는 태그 -->
-    <hr color="red"> 
-    <h2>회원가입 화면</h2>
-    가입할 아이디 <input type="text" class="member"> <br>
-    가입할 패스워드 <input type="password"> <br>
-    가입할 이름 <input type="text"  class="member"> <br>
-    성별 <input type="radio" name="gender" checked>남 
-        <input type="radio" name="gender" >여
-        <br>
-    결혼여부 <input type="radio"  name="m" checked>기혼 
-        <input type="radio"  name="m" >미혼
-        <br>
-    취미 <input type="checkbox" checked>달리기
-        <input type="checkbox" checked>동영상보기
-        <input type="checkbox" checked>인터넷서핑
-        <br>
-    전화번호 통신사  <select>
-                        <option>SKT</option>
-                        <option>LGT</option>
-                        <option>KT</option>
-                        <option selected>알뜰폰</option>
-                    </select>
-                    <input type="number" placeholder="-빼고 입력해주세요.">
-    <hr>
-    하고 싶은 말 <textarea cols="30" rows="5" placeholder="100글자로 입력"></textarea>
-                </body>
+    <h3>로그인 화면</h3>
+    <table border="1" align="center">
+        <!-- table align은 테이블을 가운데로 옮겨준다.-->
+        <tr align="center">
+            <td>아이디</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr align="center">
+            <td>패스워드</td>
+            <td><input type="password"></td>
+        </tr>
+        <tr align="center">
+            <td colspan="2" style="background: lime;">
+                <input type="submit" value="로그인처리"
+                        style="background: red;color: white;"
+                >
+                
+            </td>
+        </tr>
+    </table>
+</body>
 </html>
-
-
-
-
-
-
-
