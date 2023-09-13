@@ -32,6 +32,33 @@
             width: 800px;
             height: 700px;
         }
+        li{
+            background: yellow;
+            list-style: none;
+            float: left;
+            padding: 15px;
+            width: 100px;
+            height: 20px;
+            text-align: center;
+            /* border-radius: 10px 0 0 10px; */
+        }
+        li:first-child { /* 첫번째 li */
+            border-radius: 50px 0 0 50px;
+        }
+        li:last-child { /* 마지막 li */
+            border-radius: 0 50px 50px 0 ;
+        }
+        li:nth-child(2n){ /* 짝수 li */
+            background: orange;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover { /*가상으로 마우스를 올렸을 때 */
+            text-decoration: underline;
+            background: blue;
+            color: yellow;
+        }
     </style>
 </head>
 <body>
