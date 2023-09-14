@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       //1. 입력
+       let where = prompt('산, 바다, 강 중 어디로 가고  싶은가요??')
+       
+       //2. 처리 + 출력
+       let result = '' 
+       let site = ''
+        if(where == '산'){
+            result = '당신은 산을 선택하셨군요! 한라산을 가볼까요?'
+            site = 'https://jeju.go.kr/hallasan/index.htm'
+        }else if(where == '바다'){
+            result = '당신은 바다를 선택하셨군요! 광안리로 가실까요?'
+            site = 'https://www.visitbusan.net/kr/index.do?menuCd=DOM_000000201001001000&uc_seq=377&lang_cd=ko'
+        }else{
+            result = '당신은 강을 선택하셨군요! 한탄강으로 가실까요?'
+            site = 'https://www.cwg.go.kr/tour/contents.do?key=1644&ctgry=53&sortTy=RECOMEND'
+        }
+
+
+       //3. 출력
+        alert(result)
+        location.href = site
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
