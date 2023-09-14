@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let where = prompt('당신은 어디로 가고 싶나요?(산,바다,강 중 선택)')
+        let result = ''
+        let site =''
+        if(where == '산'){
+            result ='한라산으로 가볼까요.'
+            site = 'https://map.naver.com/p/directions/-/14085744.029616568,3943066.540575722,%ED%95%9C%EB%9D%BC%EC%82%B0,11796130,PLACE_POI/-/car?c=15.00,0,0,0,dh'
+
+        }else if(where==바다){
+            result = '광안리로 가볼까요.'
+            site = 'https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%EA%B4%91%EC%95%88%EB%A6%AC&oquery=%ED%95%9C%EB%9D%BC%EC%82%B0&tqi=id6ClsprvTossb4QQ2GssssstCo-346732'
+
+        } else{
+            result = '한탕강을 가볼까요'
+            site = 'https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%ED%95%9C%ED%83%95%EA%B0%95&oquery=%EA%B4%91%EC%95%88%EB%A6%AC&tqi=id6o5wprvTossbaCgQsssssstiZ-477017'
+        }
+        alert(result)
+        locaion.href = site 
+        //오류가 있는 경우 브라우저에서 f12을 누른 후 콘솔로 확인
+        //오류가 난 줄도 확인할 수 있음.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
