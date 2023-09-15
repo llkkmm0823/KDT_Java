@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function plus(){
+            //입력 -->처리 -->출력
+           let n1_value = document.getElementById('n1').value 
+           let n2_value = document.getElementById('n2').value 
+                //모든 입력값의 데이터 타입은 문자 !
+           let n1_value2 = parseInt(n1_value)
+           let n2_value2 = parseInt(n2_value)
+           let result = n1_value2 + n2_value2
+            alert(' 두 수의 합은 ' + result)
+        }   
+        function minus(){
+            //입력 -->처리 -->출력
+           let n1_value = document.getElementById('n1').value 
+           let n2_value = document.getElementById('n2').value 
+                //모든 입력값의 데이터 타입은 문자 !
+           let n1_value2 = parseInt(n1_value)
+           let n2_value2 = parseInt(n2_value)
+           let result = n1_value - n2_value
+            alert(' 두 수의 차는 ' + result)
+        }   
+        function login(){
+            //입력 --> 처리 --> 출력
+            let id_value = document.getElementById('user').value //root
+            let pw_value = document.getElementById('pw').value //1234
+        
+            let result = '' //변수를 만들면 반드시 초기값을 넣어주세요.
+            if(id_value == 'root' &&  pw_value == '1234'){
+                //if문은 조건이 true일때만 실행!!!!
+                //조건은 비교하는 것이 들어가야함.!!!
+                result = '로그인 성공'
+            }else{
+                result = '로그인 실패'
+            }
+
+            alert('로그인 결과>> ' + result)
+        }
+    </script>
+    
+</head>
+<body>
+    숫자1 : <input id = "n1" type="text" value="100"> <br>
+    숫자2 : <input id = "n2" type="text" value="200"> <br>
+  <button onclick= "plus()">더하기 기능 처리</button>
+  <button onclick= "minus()">빼기 기능 처리</button>
+  <hr>
+  id: <input type="text" id = "user" value="root"> <br>
+  pw: <input type="text" id = "pw" value="1234"> <br>
+  <button onclick="login()">빼기 기능 처리</button>
+</html>

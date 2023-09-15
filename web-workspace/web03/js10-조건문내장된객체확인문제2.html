@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       //1. 입력
+      user_id = prompt('아이디를 입력하세요.')
+       
+       //2. 처리 + 출력
+      let result = ''
+      let col = ''
+      if(user_id == 'admin'){
+        result = '관리자로 로그인되었습니다.'
+        col = 'red'
+      }else{
+        result = '일반 유저로 로그인되었습니다.'
+        col = 'blue'
+      }
+      //관리자는 빨강색, 일반유저는 파랑색으로 출력해보세요.
+       //3. 출력
+       document.write('<font color=' + col + '>' + result + '</font>')
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
