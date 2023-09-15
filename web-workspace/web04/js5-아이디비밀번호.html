@@ -5,18 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        
+        function user(){
+            let user_value = document.getElementById('user').value
+            let size = user_value.length //글자수 
+            let mid = ''
+            if(size < 5){
+                mid = '5글자보다 아이디는 더 커야합니다.'
+            }else{
+                mid = '5글자이상이므로 사용 가능합니다.'
+            }
+            result.innerHTML = mid
+        }
+        function check(){
+            let pw1_value = document.getElementById('pw1').value
+            let pw2_value = document.getElementById('pw2').value
+
+            let mid = ''
+            if(pw1_value == pw2_value){
+                mid = '일치!!' + "<img src='yes.jpg'>"
+            }else{
+                mid = '불일치!!' + "<img src='no.png'>"
+            }
+
+            result.innerHTML = mid
+        }
     </script>
 </head>
 <body>
-    아이디 <input type="text" id="user"> <button onclick="user()">아이디 글자수 체크</button>
+    아이디 <input type="text" id="user"> 
+    <button onclick="user()">아이디 글자수 체크</button>
     <hr>
     패스워드1 <input type="password" id="pw1"> <br>
     패스워드2 <input type="password" id="pw2"> <br>
     <button onclick="check()">패스워드 일치 체크</button>
     <hr>
-    <div id="result" style="background: yellow;">
-    
-    </div>
+    <div id="result" style="background: yellow; width: 500px; height: 300px;"></div>
 </body>
 </html>
