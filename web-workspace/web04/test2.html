@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('button').click(function(){
+                let input_value = $('input').val() //document.getElementById().value
+                alert('당신이 입력한 데이터는 ' + input_value)
+            })
+        })
+    </script>
+</head>
+<body>
+    하고 싶은 말<input type="text">
+    <button>나를 눌러바</button>
+</body>
+</html>
