@@ -8,7 +8,10 @@ public class 숫자맞추기게임 {
 
 	public static void main(String[] args) {
 		Random r = new Random();
-		int target = r.nextInt(99) + 1; 
+		int target = r.nextInt(99) + 1;
+		//r.nextInt(99) ==> 0~98
+		//r.nextInt(99) + 1 ==> 1~99
+		
 		int total = 0;
 		
 		while (true) {
@@ -26,11 +29,11 @@ public class 숫자맞추기게임 {
 			} else {
 				System.out.println("정답이 아닙니다. ");
 				//정답보다 높은지, 낮은지 힌트를 주세요.!
-				if (target < data2) {
+				if (target < data2) { 
 					System.out.println("정답보다 커요!");
 				} else {
 					System.out.println("정답보다 작아요!");
-				}//else.else
+				} //else
 			} //else
 		}//while
 	}//main
