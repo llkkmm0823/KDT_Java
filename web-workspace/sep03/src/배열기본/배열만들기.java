@@ -36,8 +36,13 @@ public class 배열만들기 {
 //		System.out.println(s[2]);
 //		System.out.println(s[3]);
 
+		//c언어에서 사용하던 for문 문법 
 		for (int i = 0; i < s.length; i++) {
 			System.out.println(s[i]);
+		}
+		for (int x : s) {
+			//출력용으로만 사용! 
+			System.out.println(x);
 		}
 	}
 
