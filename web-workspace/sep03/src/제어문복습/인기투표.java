@@ -18,6 +18,7 @@ public class 인기투표 {
 				System.out.println("아이유 득표수 " + iu);
 				System.out.println("유재석 득표수 " + you);
 				System.out.println("방탄 득표수 " + bts);
+				//심화문제 추가 ==> winner 프린트!
 				System.exit(0);
 			} else if (choice == 1) {
 				iu++;
