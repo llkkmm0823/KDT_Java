@@ -60,7 +60,9 @@ public class 음식점주문화면 {
 		l3.setForeground(Color.blue);
 		
 		
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// 맨 끝으로 보내라.!
 		f.setVisible(true);
+		
 	}
 }
