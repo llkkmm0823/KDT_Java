@@ -2,6 +2,9 @@ package 메서드기본;
 
 public class 계산기 {
 	
+	public 계산기() {
+		
+	}
 	//public X - 같은 패키지 내에서만 사용함 
 	//public O - 다른 패키지에서도 사용 가능함.
 	public void add() {
