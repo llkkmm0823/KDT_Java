@@ -14,6 +14,7 @@ public class 카운터프로그램 {
 	public static int count; //전역변수 0으로 초기화 
 	
 	public static void main(String[] args) {
+		//static int n1 = 0;
 		JFrame f = new JFrame("나의 카운터 프로그램");
 		f.setSize(400, 300);
 		

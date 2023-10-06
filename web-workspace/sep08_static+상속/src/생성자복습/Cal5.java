@@ -36,4 +36,4 @@ public class Cal5 {
 		}
 		return list;
 	} // getOdd()
-}//class
+}
