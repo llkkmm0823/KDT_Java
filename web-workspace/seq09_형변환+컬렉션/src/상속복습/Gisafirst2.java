@@ -1,28 +1,33 @@
 package 상속복습;
 
-public class Gisafirst {
+public class Gisafirst2 {
 	public static void main(String[] args) {
-		A b = new B();
-		b.paint();
-		b.draw();
+		B2 b = new B2();
+		b.paint();// BCD
+		b.draw();// D
 	}
 }
-class A {
+
+class A2 {
 	public void paint() {
 		System.out.print("A");
-		draw();
 	}
+
 	public void draw() {
 		System.out.print("B");
-		draw();
 	}
 }
-class B extends A {
+
+class B2 extends A2 {
+
+	@Override
 	public void paint() {
-		super.draw();
-		System.out.print("C");
-		this.draw();
+		super.draw(); // B
+		System.out.print("C"); // C
+		this.draw(); // D
 	}
+
+	@Override
 	public void draw() {
 		System.out.print("D");
 	}

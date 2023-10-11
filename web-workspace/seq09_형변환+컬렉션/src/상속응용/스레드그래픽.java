@@ -118,14 +118,3 @@ public class 스레드그래픽 extends JFrame {
 	}
 
 } // class
-
-
-
-
-
-
-
-
-
-
-
