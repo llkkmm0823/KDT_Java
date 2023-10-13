@@ -1,0 +1,127 @@
+-- 설명/comments 
+
+-- 1.db생성 : ctrl + enter
+
+create database shop2
+
+use shop2 -- shop2 db선택 
+
+
+-- 2.table생성:항목명 결정
+
+create table member (
+	id varchar(100),
+	pw varchar(100),
+	name varchar(100),
+	tel varchar(100)
+)
+
+-- Data Definition Language(DDL)
+-- 여기까지는 데이터를 어떤 것을 저장할지 정의하는 문법 
+
+-- 이 아래부터는 데이터를 어떻게 할지 조작을 하는 문법 
+-- Data Manipulation Language(DML)
+
+-- 3.data넣어보고,수정/검색/삭제 
+-- varchar == String
+
+insert into member values ('100', '100', 'hong', '011');
+insert into member values ('200', '200', 'kim', '012');
+insert into member values ('300', '300', 'lee', '013');
+
+
+select * from member
+
+update member set tel = '000'
+
+update member set tel = '999' where id = '100'
+
+-- java ==, sql =
+
+-- id가 200인 사람의 이름을 park이라고 수정해보세요.
+update member set name = 'park' where id = '200'
+
+-- 조건에서 and, or
+
+delete from member where id = '100'
+
+delete from member where id = '200' and tel = '000'
+
+select id from member
+
+select id, tel, name from member
+
+create table product3(
+id varchar(100),
+name varchar(100),
+content varchar(100),
+price int(100),
+company varchar(100),
+img varchar(100)
+)
+
+insert into product3 values ('100','shoes1','funshoes1','1000','c100','1.png');
+insert into product3 values ('101','shoes2','funshoes2','2000','c200','2.png');
+insert into product3 values ('102','shoes3','funshoes3','3000','c300','3.png');
+insert into product3 values ('103','shoes4','funshoes4','4000','c400','4.png');
+
+select * from product3
+
+SELECT name, content FROM product3 WHERE id = '100';
+
+SELECT price FROM product3 WHERE id = '102';
+
+UPDATE product3 SET price = 5000 WHERE name = 'shoes1';
+
+UPDATE product3 SET company = 'c555' WHERE name = 'shoes2';
+
+UPDATE product3 SET name = 'fun', price = 9999 WHERE id = '103';
+
+DELETE FROM product3 WHERE id = '101';
+
+select * from product3
+
+
+
+create database bookstore
+
+use bookstore
+
+create table member (
+	id varchar(100),
+	pw varchar(100),
+	name varchar(100)
+)
+
+create table book (
+	title varchar(100),
+	author varchar(100),
+	inventory int(100),
+	price int(100)
+)
+
+insert into member values('jung','1234','min');
+insert into member values('yoon','1234','bum');
+insert into member values('kang','1234','yoon');
+
+insert into book values ('The Old Man and The Sea', 'Hemingway', 2,7200);
+insert into book values ('일반기계기사 필기', '한국산업인력공단', 0,49500);
+insert into book values ('해커스토익', '해커스', 10, 20000);
+
+
+select *from member;
+select id from member where name = 'yoon';
+select id, name from member where pw = '1234';
+
+select *from book;
+select inventory, price from book where title = '해커스토익'select inventory from book where price = '10000';
+update book set inventory = '5' where title = '일반기계기사 필기';
+
+UPDATE member SET pw ='1235' WHERE name = 'kang';
+delete from member where name = 'min';
+
+UPDATE book SET author ='한국산업인력고옹단' WHERE price = '49500';
+delete from book where inventory = '10';
+
+
+
