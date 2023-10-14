@@ -2,6 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import random
 
+#파이썬으로 작성해보려했는데 크롤링이 안되어서 엑셀로함 ㅠㅠ
+
 # 인스타그램 게시물 URL
 instagram_url = 'https://www.instagram.com/p/CyIgWpnRilY/'
 
