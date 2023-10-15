@@ -81,7 +81,7 @@ DELETE FROM product3 WHERE id = '101';
 
 select * from product3
 
-
+--조별과제 
 
 create database bookstore
 
