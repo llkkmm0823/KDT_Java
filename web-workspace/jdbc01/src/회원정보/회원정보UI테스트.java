@@ -2,8 +2,6 @@ package 회원정보;
 
 import javax.swing.JOptionPane;
 
-import db연결.MemberDAO;
-
 public class 회원정보UI테스트 {
 
 	public static void main(String[] args) {
