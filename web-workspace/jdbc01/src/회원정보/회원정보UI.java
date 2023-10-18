@@ -1,15 +1,19 @@
 package 회원정보;
+
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-import DB연결.MemberDAO;
+import db연결.MemberDAO;
+
 public class 회원정보UI {
 
 	public static void main(String[] args) {
@@ -39,12 +43,16 @@ public class 회원정보UI {
 
 		JButton b1 = new JButton("회원가입 요청");
 		JButton b2 = new JButton("회원탈퇴 요청");
+		JButton b3 = new JButton("회원수정 요청");
 		b1.setBackground(Color.yellow);
 		b1.setForeground(Color.BLUE);
 		b1.setOpaque(true);
 		b2.setBackground(Color.yellow);
 		b2.setForeground(Color.BLUE);
 		b2.setOpaque(true);
+		b3.setBackground(Color.yellow);
+		b3.setForeground(Color.BLUE);
+		b3.setOpaque(true);
 
 		t1.setBackground(Color.pink);
 		t1.setForeground(Color.red);
@@ -70,6 +78,7 @@ public class 회원정보UI {
 
 		b1.setFont(font);
 		b2.setFont(font);
+		b3.setFont(font);
 
 		f.add(l1); // 이미지
 		f.add(l2); // 회원ID :
@@ -82,6 +91,7 @@ public class 회원정보UI {
 		f.add(t4);
 		f.add(b1);
 		f.add(b2);
+		f.add(b3);
 
 		b1.addActionListener(new ActionListener() {
 
@@ -102,7 +112,36 @@ public class 회원정보UI {
 				dao.insert(id, pw, name, tel);
 			}
 		});
-
+		
+		b2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				//탈퇴할 id를 입력받으세요.!
+				String id = JOptionPane.showInputDialog("탈퇴할 id를 입력하세요");
+				//DAO를 이용합니다.
+				MemberDAO dao = new MemberDAO();
+				//id를 전달하면서 delete()
+				dao.delete(id);
+				
+			}
+		});
+		
+		b3.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				//b3을 눌렀을 때 처리내용을 코딩 
+				//입력한 값 2개를 가지고 와서 저장 
+				String id = JOptionPane.showInputDialog("수정할 Id");
+				String tel = JOptionPane.showInputDialog("수정될 Tel");
+				//DAO를 이용해서 db처리 
+				MemberDAO dao = new MemberDAO();
+				//sql문을 전송 
+				dao.update(id, tel);
+			}
+		});
+		
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f.setVisible(true); // 맨끝에!!
 

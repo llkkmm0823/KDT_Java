@@ -1,10 +1,11 @@
-package DB연결;
+package db연결;
 
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-public class DB연결테스트1 {
+public class DB테스트 {
 
 	public static void main(String[] args) {
 		//Java-DB연결 (JDBC) 4단계 
@@ -27,8 +28,8 @@ public class DB연결테스트1 {
 		System.out.println("2. shop db연결 성공!!");
 		
 		//3. 2번에서 연결된 것을 가지고 sql문 생성 
-		String sql = "insert into member values ('star2','1234','star','011')";
-		String site = "http://www.naver.com";
+		String sql = "insert into member values ('star3','1234','star','011')";
+		//String site = "http://www.naver.com";
 		//해당부품으로 만들어주어야 한다.
 		//sql ==> PreparedStatement
 		//site ==> URL
