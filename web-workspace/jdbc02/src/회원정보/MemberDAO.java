@@ -10,7 +10,8 @@ public class MemberDAO { // member테이블에 crud를 하고 싶으면 MemberDA
 	// shop db member table에
 	// 접근해서 처리하는 객체
 
-	public void one(String id) {
+	public MemberVO one(String id) {
+		MemberVO bag = new MemberVO();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			System.out.println("1. 커넥터 연결 성공!!");
@@ -39,6 +40,10 @@ public class MemberDAO { // member테이블에 crud를 하고 싶으면 MemberDA
 				System.out.println(pw);
 				System.out.println(name);
 				System.out.println(tel);
+				bag.setId(id2);
+				bag.setPw(pw);
+				bag.setName(name);
+				bag.setTel(tel);
 			}else {
 				System.out.println("검색결과가 없음.");
 			}
@@ -46,7 +51,7 @@ public class MemberDAO { // member테이블에 crud를 하고 싶으면 MemberDA
 			e.printStackTrace();// 에러정보를 추적해서 프린트해줘.!
 			System.out.println("에러발생함.!!!!");
 		}
-
+		return bag;
 	} // one
 
 	

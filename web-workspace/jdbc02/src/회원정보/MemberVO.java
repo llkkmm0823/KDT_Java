@@ -32,6 +32,10 @@ public class MemberVO {
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
+	@Override
+	public String toString() {
+		return "가방에 들어있는 데이터 [id=" + id + ", pw=" + pw + ", name=" + name + ", tel=" + tel + "]";
+	}
 	
 } //class
 

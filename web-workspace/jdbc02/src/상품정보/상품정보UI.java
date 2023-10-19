@@ -1,4 +1,4 @@
-package 게시판정보;
+package 상품정보;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -13,39 +13,42 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import 회원정보.MemberDAO;
-import 회원정보.MemberVO;
 
-public class 게시판정보UI {
+public class 상품정보UI {
 
 	public static void main(String[] args) {
 		// 필요한 부품들을 RAM에 가져다놓아야한다.
 
 		// JFrame
 		JFrame f = new JFrame();
-		f.setSize(400, 650);
-		f.setTitle("나의 게시판정보UI");
-		f.getContentPane().setBackground(Color.GRAY);
+		f.setSize(400, 500);
+		f.setTitle("나의 상품정보UI");
+		f.getContentPane().setBackground(Color.LIGHT_GRAY);
 
 		// FlowLayout
 		FlowLayout flow = new FlowLayout();// 램
 		f.setLayout(flow); // 조립
 		// Font
 		// JLabel 5, JTextField 4, JButton 2
-		JLabel l1 = new JLabel("<<<<<< 게시판 >>>>>>");
-		JLabel l0 = new JLabel("게시판 번호 : ");
-		JLabel l2 = new JLabel("게시판 제목 : ");
-		JLabel l3 = new JLabel("게시판 내용 : ");
-		JLabel l4 = new JLabel("게시판 작성자: ");
+		JLabel l1 = new JLabel("<<<<<< 상품정보 >>>>>>");
+		JLabel l0 = new JLabel("상품 번호 : ");
+		JLabel l2 = new JLabel("상품 제목 : ");
+		JLabel l3 = new JLabel("상품 내용 : ");
+		JLabel l4 = new JLabel("상품 가격 : ");
+		JLabel l5 = new JLabel("상품 회사 : ");
+		JLabel l6 = new JLabel("상품 이미지 : ");
 
 		JTextField t0 = new JTextField(10); 
 		JTextField t1 = new JTextField(10); // 10은 글자수
 		JTextField t2 = new JTextField(10);
 		JTextField t3 = new JTextField(10);
+		JTextField t4 = new JTextField(10);
+		JTextField t5 = new JTextField(10);
 
-		JButton b1 = new JButton("게시판 글쓰기 요청");
-		JButton b2 = new JButton("게시판 글삭제 요청");
-		JButton b3 = new JButton("게시판 글수정 요청");
-		JButton b4 = new JButton("게시판 글검색 요청");
+		JButton b1 = new JButton("상품 추가 요청");
+		JButton b2 = new JButton("상품 삭제 요청");
+		JButton b3 = new JButton("상품 수정 요청");
+		JButton b4 = new JButton("상품 검색 요청");
 		b1.setBackground(Color.yellow);
 		b1.setForeground(Color.BLUE);
 		b1.setOpaque(true);
@@ -67,20 +70,28 @@ public class 게시판정보UI {
 		t2.setForeground(Color.red);
 		t3.setBackground(Color.pink);
 		t3.setForeground(Color.red);
+		t4.setBackground(Color.pink);
+		t4.setForeground(Color.red);
+		t5.setBackground(Color.pink);
+		t5.setForeground(Color.red);
 
-		Font font = new Font("맑은 고딕", Font.BOLD, 30);
-		Font font2 = new Font("맑은 고딕", Font.BOLD, 50);
+		Font font = new Font("맑은 고딕", Font.BOLD, 25);
+		Font font2 = new Font("맑은 고딕", Font.BOLD, 40);
 
 		l1.setFont(font2);
 		l0.setFont(font);
 		l2.setFont(font);
 		l3.setFont(font);
 		l4.setFont(font);
+		l5.setFont(font);
+		l6.setFont(font);
 
 		t0.setFont(font);
 		t1.setFont(font);
 		t2.setFont(font);
 		t3.setFont(font);
+		t4.setFont(font);
+		t5.setFont(font);
 
 		b1.setFont(font);
 		b2.setFont(font);
@@ -96,6 +107,10 @@ public class 게시판정보UI {
 		f.add(t2);
 		f.add(l4);
 		f.add(t3);
+		f.add(l5);
+		f.add(t4);
+		f.add(l6);
+		f.add(t5);
 		f.add(b1);
 		f.add(b2);
 		f.add(b3);
@@ -106,14 +121,25 @@ public class 게시판정보UI {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				//입력한 정보 가지고 올 것 
-				//bbsDAO를 이용하자.
-				//입력한 정보를 주면서 bbsDAO의 insert()요청 
-				String title = t1.getText();
+				String id = t0.getText();
+				String name = t1.getText();
 				String content = t2.getText();
-				String writer = t3.getText();
+				String price = t3.getText();
+				String company = t4.getText();
+				String img = t5.getText();
+				//ProductDAO를 이용하자.
+				ProductDAO dao = new ProductDAO();
+				//가방필요--> 데이터를 넣고 --> 가방을 전달 
+				ProductVO bag = new ProductVO();
+				bag.setId(id);
+				bag.setName(name);
+				bag.setContent(content);
+				bag.setPrice(Integer.parseInt(price));
+				bag.setCompany(company);
+				bag.setImg(img);
 				
-				BbsDAO dao = new BbsDAO();
-				dao.insert(title, content, writer);
+				//입력한 정보를 주면서 ProductDAO의 insert()요청 
+				dao.insert(bag);
 			}
 		});
 		
@@ -121,9 +147,7 @@ public class 게시판정보UI {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				String no = JOptionPane.showInputDialog("삭제할 게시판 No입력");
-				BbsDAO dao = new BbsDAO();
-				dao.delete(Integer.parseInt(no));
+				
 				
 				
 			}
@@ -133,13 +157,7 @@ public class 게시판정보UI {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				 //String no = JOptionPane.showInputDialog("삭제할 no");
-				 String no = t0.getText();
-				 String title = t1.getText();
-				 String content = t2.getText();
 				 
-				 BbsDAO dao = new BbsDAO();
-				 dao.update(title, content, Integer.parseInt(no));
 			}
 		});
 		
@@ -148,12 +166,7 @@ public class 게시판정보UI {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				//검색할 no입력
-				String no = JOptionPane.showInputDialog("검색할 번호 입력");
-				//bbsDAO를 이용
-				BbsDAO dao = new BbsDAO();
-				//dao의 one(no)호출 
-				BbsVO bag = dao.one(Integer.parseInt(no));
-				JOptionPane.showMessageDialog(f, bag);
+				
 			}
 		});
 		

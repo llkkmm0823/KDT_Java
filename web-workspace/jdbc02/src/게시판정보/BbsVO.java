@@ -30,6 +30,10 @@ public class BbsVO {
 	public void setWriter(String writer) {
 		this.writer = writer;
 	}
+	@Override
+	public String toString() {
+		return "BbsVO [no=" + no + ", title=" + title + ", content=" + content + ", writer=" + writer + "]";
+	}
 
 	//set변수명()/get변수명() ==> setter/getter
 	

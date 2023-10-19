@@ -161,7 +161,8 @@ public class 회원정보UI {
 				//MemberDAO를 사용
 				MemberDAO dao = new MemberDAO();
 				//one(id)호출, id를 주면서 row 하나 검색 요청  
-				dao.one(id);
+				MemberVO bag = dao.one(id); //bag
+				JOptionPane.showMessageDialog(f, bag);
 			}
 		});
 
