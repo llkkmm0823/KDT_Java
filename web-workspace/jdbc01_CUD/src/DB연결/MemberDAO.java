@@ -9,6 +9,8 @@ public class MemberDAO { // member테이블에 crud를 하고 싶으면 MemberDA
 	// shop db member table에
 	// 접근해서 처리하는 객체
 
+//참고 : DTO
+
 	public void delete(String id) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
