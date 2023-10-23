@@ -1,4 +1,4 @@
-package 메서드연습;
+package 리펙토링;
 
 public class MemberVO {
 	private String id;

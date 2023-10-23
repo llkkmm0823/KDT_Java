@@ -1,4 +1,4 @@
-package 메서드연습;
+package DBCP;
 
 public class MemberVO {
 	private String id;
