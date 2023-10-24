@@ -1,3 +1,5 @@
+<%@page import="bean.BbsVO"%>
+<%@page import="bean.BbsDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
@@ -10,6 +12,14 @@
      	String title = request.getParameter("title");
      	String content = request.getParameter("content");
      	String writer = request.getParameter("writer");
+     	
+     	BbsDAO dao = new BbsDAO();
+     	BbsVO bag = new BbsVO();
+     	bag.setTitle(title);
+     	bag.setContent(content);
+     	bag.setWriter(writer);
+     	
+     	dao.insert(bag);
      %>
 <!DOCTYPE html>
 <html>
