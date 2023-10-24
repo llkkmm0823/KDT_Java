@@ -1,3 +1,4 @@
+<%@page import="bean.MemberDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <!--
@@ -19,7 +20,10 @@
      	String tel = request.getParameter("tel");
      	
      	//2. DAO에 데이터를 주소 db처리 요청 
-     	
+     	MemberDAO dao = new MemberDAO();
+     	//bag기능을 하는 DTO( VO가 필요 )
+     	MemberVO bag = new MemberVO();
+     	dao.insert(bag);
      	//3. 결과를 html로 만들어서 클라이언트에 전송
      %>
 <!DOCTYPE html>
