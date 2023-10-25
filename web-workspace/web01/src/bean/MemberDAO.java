@@ -68,14 +68,14 @@ public class MemberDAO { // member테이블에 crud를 하고 싶으면 MemberDA
 			ps.setString(1, id); // 물음표 번호 1번에 id에 저장한 변수값을 넣어줘!
 			System.out.println("3. sql문 생성 성공!!");
 
-			result = ps.executeUpdate();
+			result = ps.executeUpdate(); //cud는 결과가 int, 실행된 row수 
 			System.out.println("4. SQL문 mySQL로 전송 성공!!");
 			dbcp.freeConnection(con, ps);
 		} catch (Exception e) { // Exception == Error
 			e.printStackTrace();// 에러정보를 추적해서 프린트해줘.!
 			System.out.println("에러발생함.!!!!");
 		}
-		return result;
+		return result; //1, 0
 	} // delete
 
 	public int insert(MemberVO bag) {
