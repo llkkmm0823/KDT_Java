@@ -41,14 +41,11 @@ public class MemberDAO { // member테이블에 crud를 하고 싶으면 MemberDA
 			System.out.println("4. SQL문 mySQL로 전송 성공!!");
 			// System.out.println(table.next()); //table안에 데이터가 있으면 true
 			if (table.next()) { // table안에 검색결과인 row가 있는지 체크
-				String id2 = table.getString("id"); // id는 컬럼명
-				String pw = table.getString("pw");
-				String name = table.getString("name");
-				String tel = table.getString("tel");
-				bag.setId(id2);
-				bag.setPw(pw);
-				bag.setName(name);
-				bag.setTel(tel);
+				bag.setId(table.getString("id")); //apple
+				bag.setPw(table.getString("pw"));
+				bag.setName(table.getString(3)); //db와 관련된 인덱스 1부터 시작 
+				// id(1)	pw(2)	 name(3)	tel(4)
+				bag.setTel(table.getString(4));
 			} else {
 				System.out.println("검색결과가 없음.");
 			}
