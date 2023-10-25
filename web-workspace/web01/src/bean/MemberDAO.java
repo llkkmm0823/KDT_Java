@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class MemberDAO { // member테이블에 crud를 하고 싶으면 MemberDAO를 사용하면 됨.!
 	// DAO : db access object
@@ -28,6 +29,37 @@ public class MemberDAO { // member테이블에 crud를 하고 싶으면 MemberDA
 		}
 	}
 
+	public ArrayList<MemberVO> list() {
+//		int result = 0;
+		ArrayList<MemberVO> list = new ArrayList<>();
+		
+		try {
+			String sql = "select * from member";
+			PreparedStatement ps = con.prepareStatement(sql); //
+			System.out.println("3. sql문 생성 성공!!");
+
+			ResultSet table = ps.executeQuery(); // 테이블로 mysql로 받아온다.
+			System.out.println("4. SQL문 mySQL로 전송 성공!!");
+			while(table.next()) { // table안에 검색결과인 row가 있는지 체크
+				//1. 가방을 만들자. 
+				//2. table에서 한행씩 꺼내서 가방에 넣자.
+				//3. 데이터가 들어있는 가방을 list에 넣자.
+				MemberVO bag = new MemberVO();
+				bag.setId(table.getString("id")); //apple
+				bag.setPw(table.getString("pw"));
+				bag.setName(table.getString(3)); //db와 관련된 인덱스 1부터 시작 
+				bag.setTel(table.getString(4));
+				list.add(bag);
+			} 
+			dbcp.freeConnection(con, ps, table);//반납 
+		} catch (Exception e) { // Exception == Error
+			e.printStackTrace();// 에러정보를 추적해서 프린트해줘.!
+			System.out.println("에러발생함.!!!!");
+		}
+		return list;
+	} // list
+
+	
 	public MemberVO one(String id) {
 //		int result = 0;
 		MemberVO bag = new MemberVO();
