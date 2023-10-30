@@ -10,14 +10,14 @@ import java.util.ArrayList;
 public class ProductDAO {
 	// 물건 리스트 전체 보기
 	public ArrayList<ProductDTO> list() throws Exception {
-		Class.forName("oracle.jdbc.driver.OracleDriver");
+		Class.forName("com.mysql.cj.jdbc.Driver");
 		// 특정한 위치에 있는 드라이버 파일을 램에 읽어들여 설정
 		System.out.println("1. 드라이버 설정 성공.@@@@");
 
 		// 2. db연결 mySQL: school, oracle: xe
-		String url = "jdbc:oracle:thin:@localhost:1521:xe";
-		String user = "scott";
-		String password = "tiger";
+		String url = "jdbc:mysql://localhost:3306/shop5?useUnicode=true&serverTimezone=Asia/Seoul";
+		String user = "root";
+		String password = "1234";
 		Connection con = DriverManager.getConnection(url, user, password); // Connection
 		System.out.println("2. db연결 성공.@@@@@@");
 
@@ -53,14 +53,14 @@ public class ProductDAO {
 
 	// 리스트 중에서 선택한 물건 하나 보기
 	public ProductDTO one(ProductDTO dto) throws Exception {
-		Class.forName("oracle.jdbc.driver.OracleDriver");
+		Class.forName("com.mysql.cj.jdbc.Driver");
 		// 특정한 위치에 있는 드라이버 파일을 램에 읽어들여 설정
 		System.out.println("1. 드라이버 설정 성공.@@@@");
 
 		// 2. db연결 mySQL: school, oracle: xe
-		String url = "jdbc:oracle:thin:@localhost:1521:xe";
-		String user = "scott";
-		String password = "tiger";
+		String url = "jdbc:mysql://localhost:3306/shop5?useUnicode=true&serverTimezone=Asia/Seoul";
+		String user = "root";
+		String password = "1234";
 		Connection con = DriverManager.getConnection(url, user, password); // Connection
 		System.out.println("2. db연결 성공.@@@@@@");
 
