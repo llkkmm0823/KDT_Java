@@ -1,11 +1,11 @@
 <%@page import="bean.BbsDAO"%>
-<%@page import="bean.BbsDTO"%>
+<%@page import="bean.BbsDTO2"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
 BbsDAO dao = new BbsDAO();
-ArrayList<BbsDTO> bag = dao.list();
+ArrayList<BbsDTO2> bag = dao.list();
 %>
 <!DOCTYPE html>
 <html>
@@ -60,7 +60,7 @@ ArrayList<BbsDTO> bag = dao.list();
 				</thead>
 				<tbody>
 					<%
-					for (BbsDTO dto : bag) {
+					for (BbsDTO2 dto : bag) {
 					%>
 					<tr class="table-info">
 						<td><%=dto.getTitle()%></td>

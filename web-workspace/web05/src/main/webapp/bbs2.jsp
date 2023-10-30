@@ -1,15 +1,15 @@
-<%@page import="bean.BbsDTO"%>
+<%@page import="bean.BbsDTO2"%>
 <%@page import="bean.BbsDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
     BbsDAO dao = new BbsDAO();
-    BbsDTO dto = new BbsDTO();
+    BbsDTO2 dto = new BbsDTO2();
     
     dto.setId(Integer.parseInt(request.getParameter("id")));
     
-    BbsDTO bag = dao.one(dto);
+    BbsDTO2 bag = dao.one(dto);
 %>
 <html>
 <head>

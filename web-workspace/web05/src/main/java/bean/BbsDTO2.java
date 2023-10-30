@@ -1,6 +1,6 @@
 package bean;
 
-public class BbsDTO {
+public class BbsDTO2 {
 	private int id;
 	private String title;
 	private String content;
