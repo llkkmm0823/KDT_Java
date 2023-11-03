@@ -1,5 +1,14 @@
+<%@page import="bean.ProductDTO"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <jsp:useBean id="bag" class="bean.ProductDTO"></jsp:useBean>
+    <jsp:setProperty property="*" name="bag"/>
+    <%
+    	
+    	ArrayList<ProductDTO> list = new ArrayList<>(); //{}
+    	list.add(bag);//[bag]
+    %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +30,7 @@
 		<jsp:include page="top2.jsp"></jsp:include>
 	</div>
 	<div id="center">
-	<br><br>
+	<br>장바구니 개수: <%= list.size() %>개 <%= bag %><br>
 		<% if(session.getAttribute("id") != null ) { %>
 			<%= session.getAttribute("id") %>님 환영합니다.
 			<a href="logout.jsp">
