@@ -1,4 +1,4 @@
-<%@page import="bean.BbsDAO"%>
+<%@page import="com.multi.mvc01.BbsDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <!-- 
@@ -13,7 +13,7 @@
 		    response.sendRedirect(“bbs.jsp”);
 		4. db처리후 결과가 1이 아니면 ~~~ 저와함께 구현!
      -->
-     <jsp:useBean id="bag" class="bean.BbsDTO2"></jsp:useBean>
+     <jsp:useBean id="bag" class="com.multi.mvc01.BbsDTO2"></jsp:useBean>
      <jsp:setProperty property="*" name="bag"/>
      
      <%

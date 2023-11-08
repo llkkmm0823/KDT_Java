@@ -1,28 +1,5 @@
-<%@page import="bean.BbsDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <!-- 
-    
-		insert.jsp —> insert2.jsp --dto—> dao --sql—> db
-		browser	<— html      	   <—1                   <—1
-		
-		1. basket.jsp를 복사해서 insert2.jsp를 만드세요.
-		2. bag(dto)를 만들어서 받은 앞페이지에서 받은 데이터를 dto에 넣으세요.
-		    액션태그 사용(jsp:useBean,jsp:setProperty)
-		3. dao.insert(bag)을 이용해서 db처리후 결과가 1이면 bbs.jsp로 화면자동 넘김
-		    response.sendRedirect(“bbs.jsp”);
-		4. db처리후 결과가 1이 아니면 ~~~ 저와함께 구현!
-     -->
-     <jsp:useBean id="bag" class="bean.BbsDTO2"></jsp:useBean>
-     <jsp:setProperty property="*" name="bag"/>
-     
-     <%
-     	BbsDAO dao = new BbsDAO();//????????
-     	int result = dao.insert(bag);//1
-     	if(result == 1){
-     		response.sendRedirect("bbs.jsp");
-     	}
-     %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,6 +28,32 @@
 				<button class="btn btn-outline-danger">로그아웃</button>
 			</a>
 		<% } %>
+		<br>
+					
+		<hr color="blue">
+		<form action="insert2.jsp">
+				<table border="1"  class="table table-hover">
+					<tr  class="table-warning">
+						<td width="200">제목</td>
+						<td width="300"><input name="title"></td>
+					</tr>
+					<tr  class="table-warning">
+						<td width="200">내용</td>
+						<td width="300"><input name="content"></td>
+					</tr>
+					<tr  class="table-warning">
+						<td width="200">작성자</td>
+						<td width="300">
+							<input name="writer" value="${id}">
+						</td>
+					</tr>
+					<tr  class="table-warning">
+						<td width="200" colspan="2">
+							<button type="submit" class="btn btn-info">글쓰기</button>
+						</td>
+					</tr>
+				</table>
+		</form>
 	</div>
 </div>
 </body>
