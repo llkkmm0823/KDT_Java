@@ -1,5 +1,7 @@
 package com.multi.mvc01;
 
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,8 +22,14 @@ public class BbsController {
 	}
 	
 	@RequestMapping("list")
-	public void list() {
-		
+	public void list(Model model) throws Exception {
+		//dao를 이용해서 여러개를 받아서 가지고 와주세요.
+		BbsDAO dao = new BbsDAO();
+		ArrayList<BbsDTO2> list = dao.list();
+		System.out.println(list.size());
+		//views/list.jsp까지 넘어가야 함.==>Model 
+		//model을 이용해서 검색결과인 list를 list.jsp까지 넘기자.!
+		model.addAttribute("list", list);
 	}
 	
 	// 요청하나당 함수하나.
