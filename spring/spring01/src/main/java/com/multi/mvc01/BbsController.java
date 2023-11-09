@@ -3,10 +3,27 @@ package com.multi.mvc01;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller // 싱글톤 + 컨트롤러 등록
 public class BbsController {
 
+	@RequestMapping("one")
+	public void one(BbsDTO2 dto, Model model) throws Exception {
+		System.out.println(dto);
+		BbsDAO dao = new BbsDAO();
+		BbsDTO2 bag = dao.one(dto);
+		//검색결과는 bag에 들어있음. ==> views/one.jsp에 결과를 출력 
+		//bag을 one.jsp까지 전달해주어야 한다. ==> Model
+		model.addAttribute("bag", bag); //Object(큰) <-- BbsDTO2
+		//자동타입변환(자동형변환, Casting, 업캐스팅)
+	}
+	
+	@RequestMapping("list")
+	public void list() {
+		
+	}
+	
 	// 요청하나당 함수하나.
 	@RequestMapping("insert2")
 	public void insert2(BbsDTO2 bag, Model model) {
