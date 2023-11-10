@@ -20,7 +20,7 @@
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
-	
+	<!-- @붙은 것을 스캔해서 싱글톤빈/컨트롤러 등록등과 같은 설정! -->
 	<context:component-scan base-package="com.multi.mvc01" />
 	
 	
