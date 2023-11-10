@@ -1,0 +1,8 @@
+싱글톤빈 만들어달라고 설정하면 스프링프로그램에서
+싱글톤빈으로 만들어준다.
+방법 1) root-context.xml <bean>
+방법 2) @어노테이션을 이용
+ @Component, @Bean ==> 싱글톤 객체
+	@Controller ==> 싱글톤 객체 + 컨트롤러 등록
+  @Repository ==> 싱글톤 객체 + db예외처리
+  @Service ==> 싱글톤 객체 + 서비스 예외처리
