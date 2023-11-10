@@ -1,12 +1,29 @@
 package com.multi.mvc01;
 
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller //싱글톤 + 주소가 요청되었을 때 컨트롤러 역할로 설정 
 public class ProductController {
-
+	
+	@RequestMapping("list2")
+	public void list2(Model model) throws Exception {
+		ProductDAO dao = new ProductDAO();
+		ArrayList<ProductDTO> list = dao.list();
+		System.out.println(list.size());
+		model.addAttribute("list", list); //Object <-- ArrayList
+	}
+	
+	@RequestMapping("one2")
+	public void one2(ProductDTO dto, Model model) throws Exception {
+		ProductDAO dao = new ProductDAO();
+		ProductDTO bag = dao.one(dto);
+		model.addAttribute("bag", bag);
+	}
+	
 	//요청하나당 함수하나!
 	@RequestMapping("insert3")
 	public String insert3(ProductDTO dto, Model model) {
