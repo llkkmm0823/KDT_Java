@@ -5,10 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <!-- Bootstrap JS (optional) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
-<img alt="no" src="resources/img/frog.jpg" width="200" height="200">
+<img alt="no" src="resources/img/frog.jpg" width="200" height="100">
 <h3>북마크정보검색</h3>
 <form action="one">
 아이디 : <input type="text" name="id"><br>

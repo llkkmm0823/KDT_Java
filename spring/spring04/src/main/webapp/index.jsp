@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<img alt="no" src="resources/img/frog.jpg" width="200" height="200">
+<img alt="no" src="resources/img/1.png" width="200" height="200">
 <h3>북마크정보검색</h3>
 <form action="one">
 아이디 : <input type="text" name="id"><br>
