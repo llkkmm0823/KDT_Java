@@ -4,7 +4,7 @@
     pageEncoding="UTF-8"%>
 <%
 	JSONObject json = new JSONObject();
-	json.put("id", "root");
+	json.put("id", "root"); //map --> HashMap put(key, value)
 	json.put("pw", "1234");
 	json.put("tel", "011");
 	
@@ -14,7 +14,7 @@
 	json2.put("tel", "0112");
 	
 	JSONArray array = new JSONArray();
-	array.add(json);
+	array.add(json); //list --> 순서! ArrayList, LinkedList add(data)
 	array.add(json2);
 	
 	out.print(array.toJSONString()); 
