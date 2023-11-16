@@ -9,11 +9,12 @@
 <script type="text/javascript">
 	$(function() { 
 		$('#b1').click(function() {
+			$('#result').empty()
 			$.ajax({
 				url: "test",
 				success: function(x) { //브라우저가 http통신 결과를 받아온다.
 					alert("ajax통신결과>> " + x)
-					$('#result').html(x)
+					$('#result').append(x + "<br>")
 				} //success
 			}) //url, success
 		}) //b1
@@ -23,7 +24,7 @@
 				url: "test2",
 				success: function(x) { //브라우저가 http통신 결과를 받아온다.
 					alert("ajax통신결과>> " + x)
-					$('#result').html(x)
+					$('#result').append(x + "<br>")
 				} //success
 			}) //url, success
 		}) //b2
