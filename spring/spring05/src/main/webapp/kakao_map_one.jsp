@@ -8,7 +8,7 @@
 
 </head>
 <body>
-	<div id="map" style="width: 100%; height: 350px;"></div>
+	<div id="map" style="width: 70%; height: 350px;"></div>
 	<script type="text/javascript" src="resources/js/jquery-3.7.1.js"></script>
 	<script type="text/javascript"
 		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5675f8f4dffbfd2b726b7b6393fd2b78"></script>
