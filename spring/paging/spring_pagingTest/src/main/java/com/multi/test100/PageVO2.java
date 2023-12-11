@@ -7,11 +7,11 @@ public class PageVO2 {
 	private int page;
 	
 	public void setStartEnd() {
-		start = 1 + (page -1) * 5;
+		start = 1 + (page -1) * 20;
 	//			1 + (1 - 1) * 5 = 1
 	//			1 + (2 - 1) * 5 = 6
 	//			1 + (3 - 1) * 5 = 11
-		end = page * 5;
+		end = page * 20;
 	//        1 * 5 = 5
 	//		  2 * 5 = 10
 	}
