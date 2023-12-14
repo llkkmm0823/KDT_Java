@@ -10,8 +10,8 @@ public class YoungService {
 	YoungDAO youngDAO;
 	
 	public void insert() {
-		//ì „ì²˜ë¦¬í•  ê²ƒì´ ìˆìœ¼ë©´ í•´ì£¼ì„¸ìš”.
-		ì²­ë…„ì§€ì›ì„¼í„°_ì²­ë…„ì •ì±…2 young = new ì²­ë…„ì§€ì›ì„¼í„°_ì²­ë…„ì •ì±…2();
+		//ÀüÃ³¸®ÇÒ °ÍÀÌ ÀÖÀ¸¸é ÇØÁÖ¼¼¿ä.
+		Ã»³âÁö¿ø¼¾ÅÍ_Ã»³âÁ¤Ã¥2 young = new Ã»³âÁö¿ø¼¾ÅÍ_Ã»³âÁ¤Ã¥2();
 		YoungVO youngVO = young.parse();
 		youngDAO.insert(youngVO);
 	}

@@ -5,26 +5,26 @@ import org.json.JSONObject;
 import org.json.XML;
 import org.springframework.web.client.RestTemplate;
 
-public class ì²­ë…„ì§€ì›ì„¼í„°_ì²­ë…„ì •ì±… {
+public class Ã»³âÁö¿ø¼¾ÅÍ_Ã»³âÁ¤Ã¥ {
 
 	public static void main(String[] args) {
 		//url + parameter
 		String url = "https://www.youthcenter.go.kr/opi/empList.do";
-		String paramter = "?openApiVlak=2853a1265426c8954d6b244d&pageIndex=1&display=10&query=ì²­ë…„ì·¨ì—…";
+		String paramter = "?openApiVlak=2853a1265426c8954d6b244d&pageIndex=1&display=10&query=Ã»³âÃë¾÷";
 		
-		//http ìš”ì²­ --> ì‘ë‹µ(xml)
+		//http ¿äÃ» --> ÀÀ´ä(xml)
 		RestTemplate rest = new RestTemplate();
 		String response = rest.getForObject(url + paramter, String.class);
 		//System.out.println(response);
 		
-		//xml --> jsonë³€ê²½ 
+		//xml --> jsonº¯°æ 
 		JSONObject json = XML.toJSONObject(response);
 		System.out.println(json);
 		
-		//jsonë¶„ì„ í›„ ì¶”ì¶œ(parser, íŒŒì„œ) 
-		//jsonë°”ê¹¥ìª½ë¶€í„° ì•ˆìœ¼ë¡œ ë“¤ì–´ì˜¤ë©´ì„œ ì¶”ì¶œì„ í•¨.
-		JSONObject empsInfo = json.getJSONObject("empsInfo");//ê°’ì´ jsonì¼ ë•Œ 
-		JSONArray arr = empsInfo.getJSONArray("emp");//ê°’ì´ jsonarrayì¼ ë•Œ 
+		//jsonºĞ¼® ÈÄ ÃßÃâ(parser, ÆÄ¼­) 
+		//json¹Ù±ùÂÊºÎÅÍ ¾ÈÀ¸·Î µé¾î¿À¸é¼­ ÃßÃâÀ» ÇÔ.
+		JSONObject empsInfo = json.getJSONObject("empsInfo");//°ªÀÌ jsonÀÏ ¶§ 
+		JSONArray arr = empsInfo.getJSONArray("emp");//°ªÀÌ jsonarrayÀÏ ¶§ 
 		System.out.println(arr.getJSONObject(0).getString("bizId"));
 		System.out.println(arr.getJSONObject(0).getString("polyBizSjnm"));
 		System.out.println(arr.getJSONObject(0).getString("plcyTpNm"));

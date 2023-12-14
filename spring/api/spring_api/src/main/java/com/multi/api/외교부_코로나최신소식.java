@@ -12,7 +12,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.XML;
 
-public class ì™¸êµë¶€_ì½”ë¡œë‚˜ìµœì‹ ì†Œì‹ {
+public class ¿Ü±³ºÎ_ÄÚ·Î³ªÃÖ½Å¼Ò½Ä {
 	public static void main(String[] args) throws IOException {
 		StringBuilder urlBuilder = new StringBuilder(
 				"http://apis.data.go.kr/1262000/SafetyNewsList/getCountrySafetyNewsList"); /* URL */
@@ -22,19 +22,19 @@ public class ì™¸êµë¶€_ì½”ë¡œë‚˜ìµœì‹ ì†Œì‹ {
 																														 * Key
 																														 */
 		urlBuilder.append("&" + URLEncoder.encode("numOfRows", "UTF-8") + "="
-				+ URLEncoder.encode("2", "UTF-8")); /* í•œ í˜ì´ì§€ ê²°ê³¼ ìˆ˜ */
+				+ URLEncoder.encode("2", "UTF-8")); /* ÇÑ ÆäÀÌÁö °á°ú ¼ö */
 		urlBuilder
-				.append("&" + URLEncoder.encode("pageNo", "UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /* í˜ì´ì§€ë²ˆí˜¸ */
+				.append("&" + URLEncoder.encode("pageNo", "UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /* ÆäÀÌÁö¹øÈ£ */
 		urlBuilder
-				.append("&" + URLEncoder.encode("title1", "UTF-8") + "=" + URLEncoder.encode("ì…êµ­", "UTF-8")); /* ì œëª©1 */
+				.append("&" + URLEncoder.encode("title1", "UTF-8") + "=" + URLEncoder.encode("ÀÔ±¹", "UTF-8")); /* Á¦¸ñ1 */
 		urlBuilder
-				.append("&" + URLEncoder.encode("title2", "UTF-8") + "=" + URLEncoder.encode("ì½”ë¡œë‚˜", "UTF-8")); /* ì œëª©2 */
+				.append("&" + URLEncoder.encode("title2", "UTF-8") + "=" + URLEncoder.encode("ÄÚ·Î³ª", "UTF-8")); /* Á¦¸ñ2 */
 		urlBuilder
-				.append("&" + URLEncoder.encode("title3", "UTF-8") + "=" + URLEncoder.encode("ìš´í•­", "UTF-8")); /* ì œëª©3 */
+				.append("&" + URLEncoder.encode("title3", "UTF-8") + "=" + URLEncoder.encode("¿îÇ×", "UTF-8")); /* Á¦¸ñ3 */
 		urlBuilder
-				.append("&" + URLEncoder.encode("title4", "UTF-8") + "=" + URLEncoder.encode("í•­ê³µê¶Œ", "UTF-8")); /* ì œëª©4 */
+				.append("&" + URLEncoder.encode("title4", "UTF-8") + "=" + URLEncoder.encode("Ç×°ø±Ç", "UTF-8")); /* Á¦¸ñ4 */
 		urlBuilder
-				.append("&" + URLEncoder.encode("title5", "UTF-8") + "=" + URLEncoder.encode("ê²©ë¦¬", "UTF-8")); /* ì œëª©5 */
+				.append("&" + URLEncoder.encode("title5", "UTF-8") + "=" + URLEncoder.encode("°İ¸®", "UTF-8")); /* Á¦¸ñ5 */
 		URL url = new URL(urlBuilder.toString());
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setRequestMethod("GET");
