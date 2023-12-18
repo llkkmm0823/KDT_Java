@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    font-family: 'Pretendard';
+    color: #333333;
+}
+html, body {
+    background-color: #ffffff;
+}
+a {
+    text-decoration: none;
+    display: block;
+}
+header {
+    width: 100%;
+    height: 80px;
+}
+.wrap {
+    width: 1200px;
+}
+.logo {
+    float: left;
+    width: 250px;
+    height: 80px;
+}
+.logo img {
+    width: 250px;
+    height: 100px;
+}
+.menu {
+    float: left;
+    width: 750px;
+    height: 80px;
+    z-index: 1;
+}
+.navi {
+    float: right;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+.navi>li {
+    float: left;
+}
+.navi>li>a {
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+}
+.navi>li>a:hover {
+    background-color: #dddddd;
+}
+.submenu {
+    width: 120px;
+    height: 80px;
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+.submenu>li>a {
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #ffffff;
+    color: #333333;
+}
+.submenu>li>a:hover {
+    background-color: #dddddd;
+}
+.log {
+	width: 200px;
+	height: 80px;
+	float: right;
+	margin-top: 30px;
+}
+.logbtn>li {
+    float: left;
+}
+.logbtn>li>a {
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #000000;
+    margin-right: 8px;
+    color: #000000;
+    border-radius: 20px;
+}
+.logbtn>li>a:hover {
+    background-color: #dddddd;
+}
+.bodywrap {
+	margin-top: 180px;
+	margin-bottom: 200px;
+}
+.text {
+	font-size: 15px;
+	font-weight: bold;
+}
+.loginform {
+	width: 400px;
+	height: 350px;
+	border: 1px solid #000000;
+	position: relative;
+}
+.inputform {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.inputform input {
+	width: 250px;
+	height: 35px;
+	border: 1px solid #000000;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #ffffff;
+}
+.login {
+	width: 250px;
+	height: 35px;
+	border: 1px solid #000000;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #ffffff;
+	font-weight: bold;
+}
+.btn {
+	width: 250px;
+	height: 40px;
+}
+.findid {
+	width: 78px;
+}
+.findpw {
+	width: 70px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.signup {
+	width: 70px;
+}
+.btn button {
+	height: 40px;
+	display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #000000;
+    margin-top: 10px;
+    background-color: #ffffff;
+    font-weight: bold;
+}
+button:hover {
+	background-color: #dddddd;
+}
+footer {
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #dddddd;
+}
+.copy {
+    width: 600px;
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 50px;
+}
