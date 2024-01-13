@@ -36,6 +36,7 @@ public class 배열결과리스트에넣기 {
 		
 		//5. 수정된 배열 전체 프린트
 		//System.out.println(Arrays.toString(n));
+		//확인하기
 		Print.arr(n);
 	}
 
