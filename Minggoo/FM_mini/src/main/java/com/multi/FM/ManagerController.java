@@ -13,6 +13,7 @@ public class ManagerController {
 	@Autowired
 	ReportDAO dao;
 	
+//주석추가하기
 	@RequestMapping("list")
 	public void list(Model model) throws Exception {
 		List<ReportVO> list = dao.list();
