@@ -1,4 +1,3 @@
--- 설명/comments 
 
 -- 1.db생성 : ctrl + enter
 
