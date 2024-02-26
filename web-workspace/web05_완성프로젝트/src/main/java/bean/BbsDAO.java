@@ -13,7 +13,7 @@ public class BbsDAO {
 	public BbsDAO() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			// 특정한 위치에 있는 드라이버 파일을 램에 읽어들여 설정
+			// 특정한 위치에 있는 드라이버 파일을 RAM에 읽어들여 설정
 			System.out.println("1. 드라이버 설정 성공.@@@@");
 
 			// 2. db연결 mySQL: school, oracle: xe
