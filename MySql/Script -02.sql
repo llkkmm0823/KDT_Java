@@ -1,5 +1,3 @@
--- 주석 
-
 -- shop, shop2, sys 
 
 -- db > table > 항목(field, item, property  attribute)
