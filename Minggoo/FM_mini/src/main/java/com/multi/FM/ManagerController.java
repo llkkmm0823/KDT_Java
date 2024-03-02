@@ -14,9 +14,8 @@ public class ManagerController {
 	@Autowired
 	ReportDAO dao;
 	
-//주석추가하기
 	@RequestMapping("list")
-	public void list(Model model) throws Exception {
+	public void list(Model model) throws Exception {//예외_하단에 뜨는 팝업 누르기
 		List<ReportVO> list = dao.list();
 		System.out.println(list.size());
 		model.addAttribute("list", list);
