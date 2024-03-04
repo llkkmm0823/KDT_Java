@@ -1,3 +1,4 @@
+
 <%= session.getAttribute("id") %>
 ${id}
 
@@ -10,6 +11,8 @@ browser	<— html      	   <—1                   <—1
 3. dao.insert(bag)을 이용해서 db처리후 결과가 1이면 bbs.jsp로 화면자동 넘김
     response.sendRedirect("bbs.jsp");
 4. db처리후 결과가 1이 아니면 ~~~ 저와함께 구현!
+
+파이썬도 배워야할 것 같다.
 
 
 
