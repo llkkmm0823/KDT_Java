@@ -15,7 +15,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class 네이버_OCR {
-
+//코드는 네이버 클로바 ocr에서 가져온 데모 코드
 	public static void main(String[] args) {
 		String apiURL = NaverAPIKey.OCR_URL;
 		String secretKey = NaverAPIKey.OCR_SECRET;
