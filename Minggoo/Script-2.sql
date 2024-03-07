@@ -1,3 +1,6 @@
+
+
+
 -- company db가 선택된 상태
 -- use company
 CREATE TABLE SALGRADE
