@@ -12,8 +12,7 @@ browser	<— html      	   <—1                   <—1
     response.sendRedirect("bbs.jsp");
 4. db처리후 결과가 1이 아니면 ~~~ 저와함께 구현!
 
-파이썬도 배워야할 것 같다.
-
+자바코드 나타낼 때 <%= %> 사용
 
 
 bbs.jsp —> 하나 클릭(bbs2.jsp) —> 수정하기(update.jsp)
