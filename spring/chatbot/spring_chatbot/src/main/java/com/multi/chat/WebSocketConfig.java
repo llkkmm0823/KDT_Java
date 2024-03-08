@@ -24,7 +24,7 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer{
 		registry.addEndpoint("/chat");//자바 웹소켓 통신 주소 
 		registry.addEndpoint("/chat").withSockJS();//자바 스크립트 웹소켓 통신 주소 
 		
-		//챗봇용 채팅 요청할 때 주소를 지정 /chat2
+		//챗봇용 채팅 요청할 때 주소를 지정 chat2라 지정
 		registry.addEndpoint("/chat2");//자바 웹소켓 통신 주소 
 		registry.addEndpoint("/chat2").withSockJS();//자바 스크립트 웹소켓 통신 주소 
 	}
