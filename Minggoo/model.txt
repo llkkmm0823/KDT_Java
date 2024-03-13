@@ -5,3 +5,4 @@ Model(방법)
 2. 컨트롤러에서 처리된 결과를 출력하고 싶을 때 views/파일명.jsp로 보내주어야 함.
     Model클래스를 이용해서 views까지 결과를 전달할 수 있음. 
 	 model.addAttribute("이름", 값);
+
